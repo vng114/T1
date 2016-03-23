@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CE-1257218</string>
+    <string name="chapter">Municipal service</string>
+    <string name="status">  In working  </string>
+    <string name="start">Create</string>
+    <string name="startDescription">25 February 2016</string>
+    <string name="registr">Register</string>
+    <string name="registrDescription">26 February 2016</string>
+    <string name="deadline">Deadline</string>
+    <string name="deadlineDescription">29 February 2016</string>
+    <string name="answerable">Answerable</string>
+    <string name="answerableDescription">Dnepropetrovsk\'s city administration</string>
+    <string name="description">An open manhole(near the biilboard). It\'s the area of the 18th and 19th tram\'s turning
+</string>
+    <string name="weight0">100</string>
+    <string name="weight1">4</string>
+    <string name="weight2">10</string>
+    <string name="weight3">14</string>
+    <string name="weight4">14</string>
+    <string name="weight5">14</string>
+    <string name="weight6">14</string>
+    <string name="weight7">30</string>
+
+
+</resources>
