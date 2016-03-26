@@ -1,6 +1,6 @@
 package com.example.my.a06;
 
-import android.app.Activity;
+import android.app.Activity; //[Comment] Unused imports
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
@@ -14,15 +14,15 @@ import android.widget.Toast;
 import com.example.my.a06.R;
 import com.squareup.picasso.Picasso;
 
-
+//[Comment] Different image sizes
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private static Context sContext;
+    private static Context sContext; //[Comment] why context is static? It's wrong
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageButton mImageButton;
+        public ImageButton mImageButton; //[Comment] Wrong visibility modifier
 
         public ViewHolder(View v) {
             super(v);
@@ -32,7 +32,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     Toast toast = Toast.makeText(sContext,
-                            "ImageButton", Toast.LENGTH_SHORT);
+                            "ImageButton", Toast.LENGTH_SHORT); //[Comment] Hardcode
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 }
@@ -43,8 +43,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
     public RecyclerAdapter(Context context) {
-        this.sContext=context;
-
+        this.sContext=context; //[Comment] Unnecessary this
+        //[Comment] Formatting
     }
 
 
@@ -66,13 +66,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         if (position==0) {
             Picasso.with(sContext).load("file:///android_asset/picasso1.png").fit().into(holder.mImageButton);
         } else if (position==1){
-            Picasso.with(sContext).load("file:///android_asset/picasso2.png").fit().into(holder.mImageButton);
+            Picasso.with(sContext).load("file:///android_asset/picasso2.png").fit().into(holder.mImageButton); //[Comment] BAD. Use arrays for recyclerview contents
         }
 
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 2; //[Comment] Hardcode. Use array
     }
 }

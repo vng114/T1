@@ -13,13 +13,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+//[Comment] Wrong status bar color
+//[Comment] Wrong text size
+//[Comment] Wrong background color
 public class MainActivity extends AppCompatActivity{
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private Toolbar mActionBarToolbar;
+    private Toolbar mActionBarToolbar; //[Comment] All these objects should be local
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +48,15 @@ public class MainActivity extends AppCompatActivity{
         mRecyclerView.setAdapter(mAdapter);
 
 
-
+        //[Comment] Formatting
     }
 
 
 
 
     public void onTextViewClick(View view) {
-
-        Toast toastControlInfo = Toast.makeText(getApplicationContext(), "TextView", Toast.LENGTH_SHORT);
+        //[Comment] Formatting
+        Toast toastControlInfo = Toast.makeText(getApplicationContext(), "TextView", Toast.LENGTH_SHORT); //[Comment] Hardcode
         toastControlInfo.setGravity(Gravity.CENTER, 0, 0);
         toastControlInfo.show();
     }
