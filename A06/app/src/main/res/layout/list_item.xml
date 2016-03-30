@@ -4,10 +4,12 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:layout_width="@dimen/imagebutton_reciclerview_widht"
-        android:layout_height="@dimen/imagebutton_reciclerview_height"
-        android:id="@+id/ib_recycler_item"/>
+    <ImageView
+        android:layout_width="@dimen/image_recycler_widht"
+        android:layout_height="@dimen/image_recycler_height"
+        android:layout_marginRight="@dimen/image_recycler_marginRight"
+        android:id="@+id/image_item_recycler"
+        android:clickable="true"/>
 
 
 </LinearLayout>

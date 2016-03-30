@@ -11,7 +11,7 @@
     <string name="answerable">Answerable</string>
     <string name="answerableDescription">Dnepropetrovsk\'s city administration</string>
     <string name="description">An open manhole(near the biilboard). It\'s the area of the 18th and 19th tram\'s turning
-</string>
+        </string>
     <string name="weight0">100</string>
     <string name="weight1">4</string>
     <string name="weight2">10</string>
@@ -20,6 +20,4 @@
     <string name="weight5">14</string>
     <string name="weight6">14</string>
     <string name="weight7">30</string>
-
-
 </resources>

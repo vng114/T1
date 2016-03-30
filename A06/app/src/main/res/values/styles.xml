@@ -6,12 +6,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="descriptionText">
-        <item name="android:textColor">@color/description_color</item>
-        <item name="android:textSize">@dimen/description_text</item>
+    <style name="descriptionItemText">
+        <item name="android:textColor">@color/description_item_color</item>
+        <item name="android:textSize">@dimen/description_item_text</item>
     </style>
-    <style name="valueText">
-        <item name="android:textColor">@color/value_color</item>
-        <item name="android:textSize">@dimen/value_text</item>
+    <style name="titleItemText">
+        <item name="android:textColor">@color/title_item__color</item>
+        <item name="android:textSize">@dimen/title_item_text</item>
     </style>
 </resources>

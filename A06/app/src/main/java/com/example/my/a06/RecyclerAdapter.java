@@ -1,52 +1,44 @@
 package com.example.my.a06;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.my.a06.R;
 import com.squareup.picasso.Picasso;
 
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    private static Context sContext;
-
+    String[] mImageLibrary={"file:///android_asset/picasso1.png",
+            "file:///android_asset/picasso2.png"};
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageButton mImageButton;
+        ImageView mImageItem;
+        Context mContextMainActivity;
 
-        public ViewHolder(View v) {
+        public ViewHolder(View v, final Context parentContext) {
             super(v);
 
-            mImageButton = (ImageButton) v.findViewById(R.id.ib_recycler_item);
-            mImageButton.setOnClickListener(new View.OnClickListener() {
+            mContextMainActivity=parentContext;
+            mImageItem = (ImageView) v.findViewById(R.id.image_item_recycler);
+
+            mImageItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast toast = Toast.makeText(sContext,
-                            "ImageButton", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(mContextMainActivity,
+                            v.getClass().getSimpleName().substring(MainActivity.NAME_CLASS_ADD), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 }
             });
         }
-
     }
-
-
-    public RecyclerAdapter(Context context) {
-        this.sContext=context;
-
-    }
-
 
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
@@ -56,23 +48,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 .inflate(R.layout.list_item, parent, false);
 
 
-        ViewHolder vh = new ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v,parent.getContext());
         return vh;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        if (position==0) {
-            Picasso.with(sContext).load("file:///android_asset/picasso1.png").fit().into(holder.mImageButton);
-        } else if (position==1){
-            Picasso.with(sContext).load("file:///android_asset/picasso2.png").fit().into(holder.mImageButton);
-        }
-
+        Picasso.with(holder.mContextMainActivity).load(mImageLibrary[position]).fit().into(holder.mImageItem);
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+
+        return mImageLibrary.length;
     }
 }

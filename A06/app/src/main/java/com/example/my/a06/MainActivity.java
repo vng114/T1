@@ -6,56 +6,46 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class MainActivity extends AppCompatActivity{
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private Toolbar mActionBarToolbar;
+    // Set the length of substring "AppCompat"
+    public static final int NAME_CLASS_ADD=9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mActionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mActionBarToolbar);
-        mActionBarToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_18dp);
-        mActionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        Toolbar actionBarToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(actionBarToolbar);
+        actionBarToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_18dp);
+        actionBarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        mRecyclerView.setHasFixedSize(true);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView.setHasFixedSize(true);
 
-        mLayoutManager = new LinearLayoutManager(this, LinearLayout.HORIZONTAL,false);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayout.HORIZONTAL,false);
+        recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new RecyclerAdapter(this);
-        mRecyclerView.setAdapter(mAdapter);
-
-
-
+        RecyclerView.Adapter adapter = new RecyclerAdapter();
+        recyclerView.setAdapter(adapter);
     }
 
+    public void onControlClick(View view) {
 
-
-
-    public void onTextViewClick(View view) {
-
-        Toast toastControlInfo = Toast.makeText(getApplicationContext(), "TextView", Toast.LENGTH_SHORT);
-        toastControlInfo.setGravity(Gravity.CENTER, 0, 0);
-        toastControlInfo.show();
+        Toast ControlInfo = Toast.makeText(getApplicationContext(),
+                view.getClass().getSimpleName().substring(MainActivity.NAME_CLASS_ADD), Toast.LENGTH_SHORT);
+        ControlInfo.setGravity(Gravity.CENTER, 0, 0);
+        ControlInfo.show();
     }
 }

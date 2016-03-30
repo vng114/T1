@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="scrollview_margin_left">15dp</dimen>
+    <dimen name="scrollview_margin_right">15dp</dimen>
+    <dimen name="scrollview_margin_top">15dp</dimen>
+    <dimen name="status_button">95dp</dimen>
+    <dimen name="description_item_text">12sp</dimen>
+    <dimen name="title_item_text">12sp</dimen>
+    <dimen name="image_recycler_height">150dp</dimen>
+    <dimen name="image_recycler_widht">140dp</dimen>
+    <dimen name="image_recycler_marginRight">11dp</dimen>
+    <dimen name="separator_scrollview">0.85dp</dimen>
+</resources>

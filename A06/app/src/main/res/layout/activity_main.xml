@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_height="?android:actionBarSize"
-        android:background="@color/status_bar_color"/>
+        android:background="@color/toolbar_color"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,9 +45,9 @@
                     android:text="@string/chapter"
                     android:layout_centerVertical="false"
                     android:id="@+id/chapterTextView"
-                    style="@style/descriptionText"
+                    style="@style/descriptionItemText"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
             </RelativeLayout>
 
@@ -64,10 +64,10 @@
                     android:id="@+id/statusTextView"
                     android:background="@drawable/status_shape"
                     android:textColor="@color/status_text_color"
-                    style="@style/valueText"
+                    style="@style/titleItemText"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
             </RelativeLayout>
 
             <View
@@ -85,22 +85,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/start"
                     android:id="@+id/startTextView"
-                    style="@style/valueText"
+                    style="@style/titleItemText"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/startDescription"
-                    style="@style/descriptionText"
-                    android:id="@+id/startDescriptionTextView"
+                    style="@style/descriptionItemText"
+                    android:id="@+id/startdescriptionItemTextView"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
             </RelativeLayout>
 
@@ -120,22 +120,22 @@
                     android:layout_height="wrap_content"
                     android:text="@string/registr"
                     android:id="@+id/registerTextView"
-                    style="@style/valueText"
+                    style="@style/titleItemText"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/registrDescription"
-                    style="@style/descriptionText"
-                    android:id="@+id/registerDescriptionTextView"
+                    style="@style/descriptionItemText"
+                    android:id="@+id/registerdescriptionItemTextView"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
             </RelativeLayout>
             <View
@@ -157,20 +157,20 @@
                     android:id="@+id/deadlineTextView"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    style="@style/valueText"
+                    style="@style/titleItemText"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/deadlineDescription"
-                    style="@style/descriptionText"
-                    android:id="@+id/deadlineDescriptionTextView"
+                    style="@style/descriptionItemText"
+                    android:id="@+id/deadlinedescriptionItemTextView"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
             </RelativeLayout>
             <View
@@ -190,20 +190,20 @@
                     android:id="@+id/answerableTextView"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    style="@style/valueText"
+                    style="@style/titleItemText"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answerableDescription"
-                    style="@style/descriptionText"
-                    android:id="@+id/answerableDescriptionTextView"
+                    style="@style/descriptionItemText"
+                    android:id="@+id/answerabledescriptionItemTextView"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:onClick="onTextViewClick" />
+                    android:onClick="onControlClick" />
 
             </RelativeLayout>
             <View
@@ -220,11 +220,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
-                android:id="@+id/descriptionTextView"
-                style="@style/descriptionText"
+                android:id="@+id/descriptionItemTextView"
+                style="@style/descriptionItemText"
                 android:layout_centerVertical="true"
                 android:clickable="true"
-                android:onClick="onTextViewClick" />
+                android:onClick="onControlClick" />
 
             </RelativeLayout>
 
